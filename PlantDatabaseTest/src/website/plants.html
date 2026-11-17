@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FloralFury | Explore Plants</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                FloralFury<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plants.html">Explore Plants</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="register-btn">Join Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Catalog Heading -->
+        <section class="catalog-header">
+            <p class="eyebrow">DISCOVER · EXPLORE · LEARN</p>
+            <h1>Explore the <span>Plant World.</span></h1>
+            <p>
+                Search our botanical database and discover information
+                about different plant species.
+            </p>
+        </section>
+
+        <!-- Search and Filters -->
+        <section class="catalog-controls">
+
+            <div class="search-container">
+                <label for="plant-search">Search plants</label>
+                <input
+                    type="text"
+                    id="plant-search"
+                    placeholder="Search by common or scientific name..."
+                >
+            </div>
+
+            <div class="filter-container">
+
+                <div class="filter-group">
+                    <label for="type-filter">Plant Type</label>
+                    <select id="type-filter">
+                        <option value="">All Types</option>
+                        <option value="Flowering">Flowering</option>
+                        <option value="Non-Flowering">Non-Flowering</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="family-filter">Family</label>
+                    <select id="family-filter">
+                        <option value="">All Families</option>
+                        <option value="Asteraceae">Asteraceae</option>
+                        <option value="Rosaceae">Rosaceae</option>
+                        <option value="Lamiaceae">Lamiaceae</option>
+                        <option value="Nephrolepidaceae">Nephrolepidaceae</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="continent-filter">Native Region</label>
+                    <select id="continent-filter">
+                        <option value="">All Regions</option>
+                        <option value="North America">North America</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Tropical Americas">Tropical Americas</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Plant Results -->
+        <section class="catalog-results">
+
+            <div class="catalog-results-heading">
+                <h2>Plant Collection</h2>
+                <p id="results-count">Showing 4 plants</p>
+            </div>
+
+            <div class="plant-grid" id="plant-grid">
+
+                <article class="plant-card"
+                    data-name="sunflower"
+                    data-scientific="helianthus annuus"
+                    data-type="Flowering"
+                    data-family="Asteraceae"
+                    data-continent="North America">
+
+                    <div class="plant-placeholder sunflower">
+                        <span>🌻</span>
+                    </div>
+
+                    <div class="plant-card-content">
+                        <h3>Sunflower</h3>
+                        <p>Helianthus annuus</p>
+                        <span>Flowering</span>
+
+                        <a href="plant-details.html?id=1001" class="details-link">
+                            View Details →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="plant-card"
+                    data-name="china rose"
+                    data-scientific="rosa chinensis"
+                    data-type="Flowering"
+                    data-family="Rosaceae"
+                    data-continent="Asia">
+
+                    <div class="plant-placeholder china-rose">
+                        <span>🌹</span>
+                    </div>
+
+                    <div class="plant-card-content">
+                        <h3>China Rose</h3>
+                        <p>Rosa chinensis</p>
+                        <span>Flowering</span>
+
+                        <a href="plant-details.html?id=1002" class="details-link">
+                            View Details →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="plant-card"
+                    data-name="basil"
+                    data-scientific="ocimum basilicum"
+                    data-type="Flowering"
+                    data-family="Lamiaceae"
+                    data-continent="Asia">
+
+                    <div class="plant-placeholder basil">
+                        <span>🌿</span>
+                    </div>
+
+                    <div class="plant-card-content">
+                        <h3>Basil</h3>
+                        <p>Ocimum basilicum</p>
+                        <span>Flowering</span>
+
+                        <a href="plant-details.html?id=1003" class="details-link">
+                            View Details →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="plant-card"
+                    data-name="boston fern"
+                    data-scientific="nephrolepis exaltata"
+                    data-type="Non-Flowering"
+                    data-family="Nephrolepidaceae"
+                    data-continent="Tropical Americas">
+
+                    <div class="plant-placeholder fern">
+                        <span>🌱</span>
+                    </div>
+
+                    <div class="plant-card-content">
+                        <h3>Boston Fern</h3>
+                        <p>Nephrolepis exaltata</p>
+                        <span>Non-Flowering</span>
+
+                        <a href="plant-details.html?id=1004" class="details-link">
+                            View Details →
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <p id="no-results" class="no-results" hidden>
+                No plants match your search. Try changing your search or filters.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h2>COSC 3318 Project - Meet the team <span>.</span></h2>
+        <pre>
+Yasmine Mohammed
+Naomi Pittman
+Ella Dever
+Caleb Yates
+Gorakh Shrestha (Sujan)
+Cristian Gonzales Soto
+        </pre>
+    </footer>
+
+    <script src="js/plants.js" defer></script>
+
+</body>
+</html>
